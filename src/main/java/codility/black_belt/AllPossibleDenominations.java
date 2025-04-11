@@ -49,7 +49,7 @@ public class AllPossibleDenominations {
      * for target =3, it should return [ [1,2] , [3]]
      */
     public static List<List<Integer>> getAllPossibleDenominations(int target) {
-        Set<List<Integer>> result = new HashSet<>();
+        List<List<Integer>> result = new ArrayList<>();
         if (target <= 0) {
             return new ArrayList<>(result);
         }
@@ -57,15 +57,15 @@ public class AllPossibleDenominations {
         List<Integer> currentCombination = new ArrayList<>();
         findCombinations(target, 1, currentCombination, result);
 
-        List<List<Integer>> sortedResult = new ArrayList<>(result);
-        for (List<Integer> combination : sortedResult) {
-            Collections.sort(combination);
-        }
+        // List<List<Integer>> sortedResult = new ArrayList<>(result);
+        // for (List<Integer> combination : sortedResult) {
+        //     Collections.sort(combination);
+        // }
         
-        return sortedResult;
+        return result;
     }
 
-    private static void findCombinations(int target, int start, List<Integer> currentCombination, Set<List<Integer>> result) {
+    private static void findCombinations(int target, int start, List<Integer> currentCombination, List<List<Integer>> result) {
         if (target == 0) {
             result.add(new ArrayList<>(currentCombination));
             return;
@@ -75,15 +75,12 @@ public class AllPossibleDenominations {
             return;
         }
         
-      
-
         for (int i = start; i <= target; i++) {   
             if(i%2 != 0) {  // pick only odd ones
                 currentCombination.add(i);
                 findCombinations(target - i, i + 1, currentCombination, result);            
                 currentCombination.remove(currentCombination.size() - 1);
-            }         
-            
+            }
         }
     }
 }

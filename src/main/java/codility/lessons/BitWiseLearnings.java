@@ -8,7 +8,7 @@ class OddOccurance
 		int res = 0;
 		for (i = 0; i < ar_size; i++)
 		{
-			res = res ^ ar[i];
+			res = res ^ ar[i]; // XOR operator
 		}
 		return res;
 	}

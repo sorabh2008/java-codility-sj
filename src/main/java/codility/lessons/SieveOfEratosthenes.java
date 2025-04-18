@@ -1,3 +1,5 @@
+package codility.lessons;
+
 class SieveOfEratosthenes {
 	void sieveOfEratosthenes(int n)
 	{

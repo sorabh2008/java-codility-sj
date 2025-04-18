@@ -1,7 +1,6 @@
-import java.util.*;
-import java.io.*;
-import java.lang.*;
-class GFG 
+package codility.lessons;
+
+class RemoveDupFromSortedArray 
 { 
     static int remDups(int arr[], int n)
     {

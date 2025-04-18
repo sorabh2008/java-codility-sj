@@ -7,9 +7,9 @@ import java.util.List;
 public class DiceRollAverage {
     public static void main(String[] args) {
         DiceRollAverage diceRollAverage = new DiceRollAverage();
-        int[] rolls = new int[]{6,6,6};
-        int remainingThrows = 5;
-        int targetAverage = 5;
+        int[] rolls = new int[]{6,3,1};
+        int remainingThrows = 10;
+        int targetAverage = 2;
         List<Integer> result = diceRollAverage.solution(rolls, remainingThrows, targetAverage);
         if(result == null) System.out.println("No possible result");
         else System.out.println(Arrays.toString(result.toArray()));

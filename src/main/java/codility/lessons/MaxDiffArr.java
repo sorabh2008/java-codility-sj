@@ -1,7 +1,6 @@
-// Java program to find Maximum difference
-// between two elements such that larger
-// element appears after the smaller number
-class MaximumDifference
+package codility.lessons;
+
+class MaxDiffArr
 {
 	/* The function assumes that there are at least two
 	elements in array.
@@ -26,7 +25,7 @@ class MaximumDifference
 	/* Driver program to test above functions */
 	public static void main(String[] args)
 	{
-		MaximumDifference maxdif = new MaximumDifference();
+		MaxDiffArr maxdif = new MaxDiffArr();
 		int arr[] = {1, 2, 90, 10, 110};
 		int size = arr.length;
 		System.out.println("MaximumDifference is " +

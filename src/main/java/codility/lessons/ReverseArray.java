@@ -1,6 +1,6 @@
-// Iterative java program to reverse an
-// array
-public class GFG {
+package codility.lessons;
+
+public class ReverseArray {
 	
 /* Function to reverse arr[] from
 	start to end*/

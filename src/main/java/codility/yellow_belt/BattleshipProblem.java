@@ -36,6 +36,21 @@ public class BattleshipProblem {
         System.out.println(Arrays.toString(new BattleshipProblem().solution(battleShipBoard)));
     }
 
+    // Convert String[] to char[][]
+    private char[][] convertStringTo2DArray(String[] str) {
+        int rows = str.length;
+        int cols = str[0].length();
+        char[][] char2DArray = new char[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            String rowString = str[i];
+            for (int j = 0; j < cols; j++) {
+                char2DArray[i][j] = rowString.charAt(j);
+            }
+        }
+        return char2DArray;
+    }
+
     private int[] solution(char[][] board) {
         int length = board[0].length;
         int height = board.length;
